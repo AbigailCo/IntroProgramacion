@@ -31,20 +31,34 @@ function cargaMascotas (){
     ];
     return $misMascotas;
 }
- 
-/**
- * Modulo muestraMasco muestra los datos de un arreglo multidimencional
- * @param function
+ /** Modulo muestraMasco muestra los datos de un arreglo multidimencional
+ * @param array
  * sin retorno
  */
 
- function muestraMasco (cargaMascotas) {
-    foreach ($infoMasco as $indice => $datos) {
-        echo "mascota " . $indice . "es " . $datos. "\n";
+ function muestraMasco ($esMascotas) {
+     
+    foreach ($esMascotas as $indice => $elemento) {
+        echo "Indice: " . $indice . "\n";
+        echo "Nombre: " . $elemento["nombre"] . "\n";
+        echo "Edad: " . $elemento["edad"] . "\n";
+        echo "Tipo: " . $elemento["tipo"] . "\n";
+    }
+
+ }
+ /**Modulo primerMenorA */
+ function primerMenorA ($esMascota, $esEdad){
+    $bandera = true;
+    $i = 0;
+    while ($i< count($esMascota) && $bandera){
+
     }
  }
+ //** Programa main llama al cargaMascotas y retorna el arroglo */
 
+    $mascotas = cargaMascotas();
+    muestraMasco($mascotas);
+    $edad = 3;
+    $menorA = primerMenorA($mascotas, $edad);
 
- /**programa principal
-  * 
-  */
+ 
